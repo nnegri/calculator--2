@@ -13,9 +13,13 @@ while True:
     operator = tokens[0]
     num1 = int(tokens[1])
     num2 = int(tokens[2])
-    
+    input_calculator(operator, num1, num2)
 
 def input_calculator(operator, num1, num2):
+    """Calculates user input
+
+    Determines and solves mathematical expression based on user input"""
+
     if operator == "q":
         break
     elif operator == "+":
