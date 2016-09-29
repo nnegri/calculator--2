@@ -14,40 +14,36 @@ def input_calculator():
     Determines and solves mathematical expression based on user input"""
     while True:
         input_string = raw_input("> ") #what the user is entering
-        tokens = input_string.split(" ")
-        operator = tokens[0]
+        user_input = input_string.split(" ")
+        operator = user_input.pop(0)
+        print user_input
+
+        """for num in user_input:
+            num = int(num)"""
 
         if operator == "q":
             return
         elif operator == "+":
-            num1 = int(tokens[1])
-            num2 = int(tokens[2])
-            result = add(num1, num2)
+            result = add(user_input)
         elif operator == "-":
-            num1 = int(tokens[1])
-            num2 = int(tokens[2])
-            result = subtract(num1, num2)
+            result = subtract(user_input)
         elif operator == "*":
-            num1 = int(tokens[1])
-            num2 = int(tokens[2])
-            result = multiply(num1, num2)
+            result = multiply(user_input)
         elif operator == "/":
-            num1 = int(tokens[1])
-            num2 = int(tokens[2])
-            result = divide(num1, num2)
+            result = divide(user_input)
         elif operator == "square":
-            num1 = int(tokens[1])
+            num1 = int(user_input[0])
             result = square(num1)
         elif operator == "cube":
-            num1 = int(tokens[1])
+            num1 = int(user_input[0])
             result = cube(num1)
         elif operator == "pow":
-            num1 = int(tokens[1])
-            num2 = int(tokens[2])
+            num1 = int(user_input[0])
+            num2 = int(user_input[1])
             result = power(num1, num2)
         elif operator == "mod":
-            num1 = int(tokens[1])
-            num2 = int(tokens[2])
+            num1 = int(user_input[0])
+            num2 = int(user_input[1])
             result = mod(num1, num2)
         print result
 
