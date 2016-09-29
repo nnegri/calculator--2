@@ -5,13 +5,13 @@ def add(user_input):
     return reduce((lambda x,y: int(x)+int(y)), user_input)
 
 def subtract(num1, num2):
-    return num1 - num2
+    return reduce((lambda x,y: int(x)-int(y)), user_input)
 
 def multiply(num1, num2):
-    return num1 * num2
+    return reduce((lambda x,y: int(x)*int(y)), user_input)
 
 def divide(num1, num2):
-    return num1 / num2
+    return reduce((lambda x,y: int(x)/int(y)), user_input)
 
 def square(num1):
     return (num1**2)
